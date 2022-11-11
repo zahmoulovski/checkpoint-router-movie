@@ -1,5 +1,6 @@
-import "./movielist.css";
+import "../styles.css";
 import MovieCard from "../MovieCard/MovieCard";
+import React from "react";
 
 function MovieList({list}){
     return(

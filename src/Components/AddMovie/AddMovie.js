@@ -1,6 +1,6 @@
-import "./addmovie.css";
+import "../styles.css";
 import ReactStars from "react-rating-stars-component";
-import { useRef,useState } from "react";
+import React, { useRef,useState } from "react";
 
 export default function AddMovie({adding}) {
 

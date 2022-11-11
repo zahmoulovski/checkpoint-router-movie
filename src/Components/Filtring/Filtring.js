@@ -1,12 +1,12 @@
-import "./filtring.css";
+import "../styles.css";
 import ReactStars from "react-rating-stars-component";
-import {useRef,useState} from "react";
-// import Genre from "../App/Genre";
+import React,{useRef,useState} from "react";
+import DarkModeToggle from "./DarkModeToggle";
 
 export default function Filtring({filter}) {
     let searchRef = useRef();
     const [rate, setRate] = useState(0);
-    
+
     const ratingChanged = (newRating) => {
          filter(searchRef.current.value,newRating);
         setRate(newRating)
@@ -18,7 +18,7 @@ export default function Filtring({filter}) {
     }
 
     return (
-            <div>
+            <div className="navbar">
                 <form className="searchform" onChange={submitted}>
                     <img src="https://static.wikia.nocookie.net/logopedia/images/d/d5/Flix_logo.png" alt="logo" style={{height:'65px'}}/>
                     <input ref={searchRef} className="form-control form-control-lg searchinp" type="text" placeholder="Search for film..." />
@@ -27,6 +27,10 @@ export default function Filtring({filter}) {
                             size={30}
                             isHalf={true}
                             activeColor="#ffd700"/>
+                    <div >
+                    <DarkModeToggle />
+                    </div>
                 </form> 
             </div>
-        );}
+        );
+    }

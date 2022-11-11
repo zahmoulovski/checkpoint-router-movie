@@ -1,11 +1,12 @@
-import {useState,useEffect} from 'react';
+import React, {useState,useEffect} from 'react';
 import AddMovie from "../AddMovie/AddMovie.js";
 import MovieList from '../MovieList/MovieList.js';
 import Filtring from '../Filtring/Filtring.js';
 import { info,theme } from '../Data/Data.js';
-import { Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./app.css";
+//import { Button } from 'react-bootstrap';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import "../styles.css";
+import "../styles.scss"
 
 function App(){
   
@@ -29,38 +30,25 @@ function App(){
 
   useEffect(()=>{ filter(keyword,rate); },[list]);
 
-// func dark
-const [theme, setTheme] = useState(
-  localStorage.getItem('Theme') || 'Light'
-);
-useEffect(() => {
-  localStorage.setItem('theme', theme);
-  document.body.className = theme;
-}, [theme]);
-//theme btn
+// const [theme, setTheme] = useState(
+//   false
+// );
+// useEffect(() => {
+//  const theItem = localStorage.getItem('theme');
+//   document.body.className = theItem;
+// }, [theme]);
 
-const [buttonText, setButtonText] = useState(theme);
-
-  const handleTheme = () => {
-   // toggleTheme()
-    if (buttonText === "Light"){
-      setButtonText('Dark')
-      setTheme('Light')
-    } else {
-    setButtonText('Light')
-    setTheme('Dark')
-    ;}
-  }
-
-// theme btn
-// func dark
+//   const handleTheme = () => {
+//     setTheme(!theme)
+//     localStorage.setItem("theme",theme)
+//   }
 
   return(
-    <div className={`App ${theme}`}>
+    <div>
         <Filtring filter={filter}/>
-        <Button onClick={()=>handleTheme()} variant="secondary">
-                    Switch to : {buttonText}
-                    </Button>
+        {/* <Button onClick={()=>handleTheme()} variant="secondary">
+                    Switch to : {theme?"Dark":"Light"}
+                    </Button> */}
         <MovieList list={filterVideos} />
         <AddMovie adding={adding} />
     </div>

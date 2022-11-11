@@ -1,0 +1,424 @@
+span {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  float: left;
+  color: grey;
+  font-size: 35px;
+  overflow: hidden
+}
+.MovieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 140px 40px
+}
+.MovieCard {
+  width: 25%;
+  padding: 10px 20px
+}
+.title {
+  font-size: 22px;
+  text-align: center;
+  padding: 10px 0 0 0
+}
+.description {
+  font-size: 15px;
+  text-align: justify;
+  text-justify: inter-word
+}
+.rate {
+  font-size: 12px
+}
+.url {
+  font-size: 10px
+}
+.spanRate {
+  color: #ffc800;
+  font-weight: 700;
+  font-size: 14px;
+  vertical-align: baseline
+}
+.poster {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.searchform {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 0 40px 0;
+  padding: 15px 0;
+  background-color: #131519;
+  top: 0;
+  z-index: 10000;
+  position: fixed;
+  width: 100%
+}
+.form-control-lg {
+  border-radius: 100px
+}
+.searchinp {
+  width: 25%
+}
+:root.Lightmode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color .3s ease
+}
+:root.Darkmode {
+  background-color: #10171d;
+  color: #dfdfdf
+}
+body.Darkmode .Darkmode-toggle > button {
+  color: #999
+}
+body.Darkmode .Darkmode-toggle > button:last-child {
+  color: #add8e6
+}
+.Darkmode-toggle {
+  display: flex;
+  margin: 0 auto
+}
+.Darkmode-toggle > button {
+  font-size: 1.2em;
+  background: 0 0;
+  border: none;
+  color: #ffe600;
+  cursor: pointer;
+  transition: color .3s ease
+}
+.Darkmode-toggle > button:last-child {
+  color: #666
+}
+.Darkmode-toggle > button:focus {
+  outline: 0
+}
+.toggle-control {
+  position: relative;
+  padding: 0 4px;
+  display: flex;
+  align-items: center
+}
+input[type=checkbox].dmcheck {
+  width: 25px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: 0
+}
+input[type=checkbox].dmcheck:checked + label {
+  left: 14px
+}
+input[type=checkbox].dmcheck:focus-visible {
+  outline: solid 2px white
+}
+input[type=checkbox].dmcheck + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all .3s ease;
+  cursor: pointer;
+  position: absolute;
+  left: 2px;
+  background: #fff;
+  opacity: .9;
+  background-color: #f6f6f6
+}
+* {
+  font-family: Roboto,sans-serif
+}
+button.btn.btn-primary.mb-3 {
+  margin: 0 0 0 15px
+}
+.card {
+  margin-bottom: 5px
+}
+button.btn.btn-secondary {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  float: right;
+  z-index: 10
+}
+.AddMovie {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 50px 0
+}
+.rating {
+  display: flex;
+  align-items: center
+}
+h6 {
+  margin-right: 120px
+}
+* {
+  font-family: Roboto,sans-serif
+}
+.MovieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 140px 40px
+}
+.MovieCard {
+  width: 25%;
+  padding: 10px 20px
+}
+.title {
+  font-size: 22px;
+  text-align: center;
+  padding: 10px 0 0 0
+}
+.description {
+  font-size: 15px;
+  text-align: justify;
+  text-justify: inter-word
+}
+.rate {
+  font-size: 12px
+}
+.url {
+  font-size: 10px
+}
+.spanRate {
+  color: #ffc800;
+  font-weight: 700;
+  font-size: 14px;
+  vertical-align: baseline
+}
+.poster {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.AddMovie {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 50px 0
+}
+.rating {
+  display: flex;
+  align-items: center
+}
+h6 {
+  margin-right: 120px
+}
+.searchform {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 0 40px 0;
+  padding: 15px 0;
+  top: 0;
+  z-index: 100000000000000;
+
+  width: 100%;
+  background-color: #95d3ff
+}
+.searchinp {
+  width: 25%
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #10171d;
+  color: #dfdfdf;
+}
+body.dark-mode .searchform {
+  background-color: #1b2938;
+}
+body.dark-mode .dark-mode-toggle > button {
+  color: #999;
+}
+body.dark-mode .dark-mode-toggle > button:last-child {
+  color: lightblue;
+}
+
+.navbar {
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: #daeffe;
+}
+
+.content {
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 600px;
+  font-size: 20px;
+  line-height: 1.3em;
+}
+.content h1 {
+  font-size: 2rem;
+}
+.content img {
+  width: 100%;
+}
+.content code {
+  background-color: #cbe9ff;
+  border-radius: 2px;
+  font-size: 1em;
+  padding: 0 5px;
+}
+.content a {
+  text-decoration: none;
+  color: #006688;
+}
+.content button {
+  color: #006688;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  padding: 0;
+}
+
+body.dark-mode .content code {
+  background-color: #1b2938;
+}
+
+body.dark-mode .content a {
+  color: #ee09;
+}
+
+body.dark-mode .content button {
+  color: #ee09;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  margin: 0 auto;
+}
+.dark-mode-toggle > button {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  color: #ffe600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.dark-mode-toggle > button:last-child {
+  color: #666;
+}
+.dark-mode-toggle > button:focus {
+  outline: none;
+}
+
+.toggle-control {
+  position: relative;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+input[type=checkbox].dmcheck {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: none;
+}
+input[type=checkbox].dmcheck:checked + label {
+  left: 30px;
+}
+input[type=checkbox].dmcheck:focus-visible {
+  outline: solid 2px white;
+}
+input[type=checkbox].dmcheck + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  left: 2px;
+  background: #fff;
+  opacity: 0.9;
+  background-color: #f6f6f6;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-img-overlay {
+  transform: translateY(13rem);
+  transition: transform 0.18s ease-in;
+}
+.card-img-overlay .card-text {
+  opacity: 0;
+  transform: translateY(-6rem);
+  transition: opacity 0.05s ease-in, transform 0.25s ease-in;
+}
+.card-img-overlay .btn {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.card {
+  overflow: hidden;
+  background-color: #345;
+}
+.card:hover .card-img {
+  mix-blend-mode: overlay;
+}
+.card:hover .card-img-overlay {
+  transform: translateY(0);
+  transition: transform 0.25s ease-out;
+  background-color: rgba(0, 0, 0, 0.677);
+}
+.card:hover .card-text {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease-out, transform 0.2s ease-out;
+}
+.card:hover .btn {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.7s ease-out, transform 0.35s ease-out;
+}
+
+.card-img-overlay {
+  top: 150px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
