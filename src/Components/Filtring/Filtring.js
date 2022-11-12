@@ -24,7 +24,7 @@ export default function Filtring({filter}) {
                     <input ref={searchRef} className="form-control form-control-lg searchinp" type="text" placeholder="Search for film..." />
                     <ReactStars count={10}
                             onChange={ratingChanged}
-                            size={30}
+                            size={20}
                             isHalf={true}
                             activeColor="#ffd700"/>
                     <div >
