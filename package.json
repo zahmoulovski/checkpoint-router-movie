@@ -8,8 +8,10 @@
   ],
   "main": "src/index.js",
   "dependencies": {
-    "react": "16.8.0",
-    "react-dom": "16.8.0",
+    "bootstrap": "^5.2.2",
+    "react": "^16.8.0",
+    "react-bootstrap": "^2.6.0",
+    "react-dom": "^16.8.0",
     "react-rating-stars-component": "^2.2.0",
     "react-router": "^6.4.3",
     "react-router-dom": "^6.4.3",
