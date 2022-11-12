@@ -1,6 +1,7 @@
-import "../styles.css";
-import "../styles.scss";
-import React from "react"
+import "./styles.css";
+import React from "react";
+import {Link} from 'react-router-dom';
+
 
 export default function MovieCard({ele}) {
     return (
@@ -13,10 +14,9 @@ export default function MovieCard({ele}) {
                                 <div className="card-img-overlay">
                                     <h2 className="title">{ele.title}</h2>
                                     <p className="genre">{ele.genre}</p>
-                                    {/* <p className="description">{ele.description}</p> */}
                                     <p className="spanRate"><span className="rate"> Rate : </span>{ele.rating}</p>
-                                    <h4 className="url">{ele.posterURL}</h4>
-                                    <a className="btn btn-outline-light">Watch tailer</a>
+                                    <h4 className="url">{ele.trailer}</h4>
+                                    <Link to={`/trailer/${ele.id}`} ><a className="btn btn-outline-light">Watch tailer</a></Link>
                                 </div>
                             </div>
                         </div>

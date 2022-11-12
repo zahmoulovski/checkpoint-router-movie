@@ -1,7 +1,6 @@
-import "../styles.css";
+import "./styles.css";
 import ReactStars from "react-rating-stars-component";
 import React,{useRef,useState} from "react";
-import DarkModeToggle from "./DarkModeToggle";
 
 export default function Filtring({filter}) {
     let searchRef = useRef();
@@ -18,18 +17,15 @@ export default function Filtring({filter}) {
     }
 
     return (
-            <div className="navbar">
-                <form className="searchform" onChange={submitted}>
-                    <img src="https://static.wikia.nocookie.net/logopedia/images/d/d5/Flix_logo.png" alt="logo" style={{height:'65px'}}/>
+            <div>
+                <form className="Filterform" onChange={submitted}>
+                    <h2>Filter</h2>
                     <input ref={searchRef} className="form-control form-control-lg searchinp" type="text" placeholder="Search for film..." />
                     <ReactStars count={10}
                             onChange={ratingChanged}
                             size={20}
                             isHalf={true}
                             activeColor="#ffd700"/>
-                    <div >
-                    <DarkModeToggle />
-                    </div>
                 </form> 
             </div>
         );
