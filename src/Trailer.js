@@ -8,14 +8,12 @@ const Trailer = () => {
   const {id}=useParams()
   const filmID=info.find((e)=>e.id==id)
   return (
-    <div className='containerT'>
-    <div className='trailer' style={{ backgroundImage: `url(${filmID.background})` }}>
-    <YtModal/>
+    <container className='trailer' style={{ backgroundImage: `url(${filmID.background})` }}>
+      <img className='trailerposter' src={filmID.img} alt='Poster' />
       <h1>{filmID.title}</h1>
-      <img src={filmID.img} alt='Poster' />
+      <YtModal/>
       <p className="description">{filmID.description}</p>
-    </div>
-    </div>
+    </container>
   )
 }
 

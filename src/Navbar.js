@@ -11,9 +11,14 @@ const NavBar = () => {
             <img src='/image/logo-black.png' className='logo' alt="logo"/>
         </li>
         </Link>
-        <Link to="/trailer">
+        <Link to="/movie">
         <li>
-            Contact
+            Movies
+        </li>
+        </Link>
+        <Link to="/tvshow">
+        <li>
+            TV Show
         </li>
         </Link>
         <li>

@@ -1,21 +1,20 @@
 import React, {useState,useEffect} from 'react';
-import AddMovie from "./AddMovie.js";
-import MovieList from './MovieList.js';
-import Filtring from './Filtring.js';
-import { info } from './Data.js';
-import "./styles.css";
+import AddMovie from '../AddMovie.js';
+import MovieList from './MovieList';
+import Filtring from '../Filtring.js';
+import { movie } from '../Data.js';
+import "../styles.css";
 
-
-function HomeApp(){
+function Movie(){
   
-  const [list,setList] = useState(info);
+  const [list,setList] = useState(movie);
   const [filterVideos, setfilterVideos] = useState(list);
   const [rate,setRate] = useState(0);
   const [keyword, setKeyword] = useState("");
 
-  function adding(info){
-    if( info.title && info.img && info.description && info.trailer ) {
-      setList([...list, info]);
+  function adding(movie){
+    if( movie.title && movie.img && movie.description && movie.trailer ) {
+      setList([...list, movie]);
     }
   }
 
@@ -37,4 +36,4 @@ function HomeApp(){
       );
 }
 
-export default HomeApp;
+export default Movie;
