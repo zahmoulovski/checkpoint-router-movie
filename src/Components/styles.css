@@ -145,7 +145,8 @@ h6 {
   text-justify: inter-word
 }
 .rate {
-  font-size: 12px
+  font-size: 12px;
+  cursor:auto;
 }
 .url {
   font-size: 10px
@@ -169,7 +170,6 @@ h6 {
 h6 {
   margin-right: 120px
 }
-
 .searchinp {
   width: 25%;
   background: #0000;
@@ -180,13 +180,11 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 body.light-mode {
   background-color: #fff;
   color: #333;
   transition: background-color 0.3s ease;
 }
-
 body.dark-mode {
   background-color: #10171d;
   color: #dfdfdf;
@@ -262,7 +260,6 @@ body.dark-mode .content a {
 body.dark-mode .content button {
   color: #ee09;
 }
-
 .dark-mode-toggle {
   display: flex;
   margin: 0 auto;
@@ -299,7 +296,6 @@ body.dark-mode .content button {
   opacity: 0;
   transform: translateY(2rem);
 }
-
 .card {
   overflow: hidden;
   background-color: #345;
@@ -322,14 +318,12 @@ body.dark-mode .content button {
   transform: translateX(0);
   transition: opacity 0.7s ease-out, transform 0.35s ease-out;
 }
-
 .card-img-overlay {
   top: 150px;
   right: 0;
   bottom: 0;
   left: 0;
 }
-
 .container {
   display: flex;
   align-items: center;
@@ -337,16 +331,38 @@ body.dark-mode .content button {
   flex-direction: row;
   flex-wrap: nowrap;
 }
-/* body.dark-mode .dmcheck {
-  background-color: #fff !important;
-} */
 body.dark-mode .star {
   opacity: 0.1 !important;
 }
 body.light-mode .sun {
   opacity: 0.1 !important;
 }
-
 button.btn.btn-primary {
   width: inherit;
+}
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.genre{
+  text-align: center;
+}
+body.dark-mode .modal-content {
+  background-color: #333;
+}
+.trailer {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: fixed;
 }

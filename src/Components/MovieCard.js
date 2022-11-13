@@ -13,9 +13,8 @@ export default function MovieCard({ele}) {
                             <div className="card text-white"><img className="poster" width="250px" height="360px" src={ele.img} alt="Poster" />
                                 <div className="card-img-overlay">
                                     <h2 className="title">{ele.title}</h2>
-                                    <p className="genre">{ele.genre}</p>
+                                    <p className="genre">{ele.year} - {ele.genre}</p>
                                     <p className="spanRate"><span className="rate"> Rate : </span>{ele.rating}</p>
-                                    <h4 className="url">{ele.trailer}</h4>
                                     <Link to={`/trailer/${ele.id}`} ><a className="btn btn-outline-light">Watch tailer</a></Link>
                                 </div>
                             </div>

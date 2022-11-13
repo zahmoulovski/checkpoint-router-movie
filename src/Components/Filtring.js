@@ -16,6 +16,10 @@ export default function Filtring({filter}) {
         filter(searchRef.current.value,rate);
     }
 
+    function refreshPage() {
+        window.location.reload(true);
+      }
+
     return (
             <div>
                 <form className="Filterform" onChange={submitted}>
@@ -26,6 +30,9 @@ export default function Filtring({filter}) {
                             size={20}
                             isHalf={true}
                             activeColor="#ffd700"/>
+                            <button onclick="{refreshPage}" className="btn btn-primary" type="submit" style={{width:"100px"}}>Reset</button>
+
+                            
                 </form> 
             </div>
         );

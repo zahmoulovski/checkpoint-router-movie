@@ -37,27 +37,27 @@ export default function AddMovie({adding}) {
 
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon3">Title </span>
-                    <input ref={titleRef} type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" />
+                    <input ref={titleRef} type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Write the movie's title" />
                 </div>
 
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon3">Pseudo </span>
-                    <input ref={idRef} type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" />
+                    <input ref={idRef} type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Write the movie's title without spaces" />
                 </div>
 
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon3">Image URL </span>
-                    <input ref={imgurlRef} type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" />
+                    <input ref={imgurlRef} type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Paste the movie poster URL" />
                 </div>
 
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon3">Trailer URL </span>
-                    <input ref={posurlRef} type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" />
+                    <input ref={posurlRef} type="text" className="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Paste the movie trailer from YouTube"/>
                 </div>
 
                 <div className="input-group">
                     <span className="input-group-text">Description</span>
-                    <textarea ref={descRef} className="form-control" aria-label="With textarea"></textarea>
+                    <textarea ref={descRef} className="form-control" aria-label="With textarea" placeholder="Write the movie description"></textarea>
                 </div>
 
                 <div className="rating">
