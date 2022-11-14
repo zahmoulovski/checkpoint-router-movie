@@ -1,45 +1,10 @@
-span {
-  position: relative;
-  cursor: pointer;
-  display: block;
-  float: left;
-  color: grey;
-  font-size: 35px;
-  overflow: hidden
+* {
+  font-family: Roboto,sans-serif
 }
-.poster {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
-}
-.Filterform {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  margin: 50px 0;
-}
-.form-control-lg {
-  border-radius: 100px
-}
-:root.Lightmode {
-  background-color: #fff;
-  color: #333;
-  transition: background-color .3s ease
-}
-:root.Darkmode {
-  background-color: #10171d;
-  color: #dfdfdf
-}
-body.Darkmode .Darkmode-toggle > button {
-  color: #999
-}
-body.Darkmode .Darkmode-toggle > button:last-child {
-  color: #add8e6
-}
-.Darkmode-toggle {
-  display: flex;
-  margin: 0 auto
+.AddMovie {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 50px 0
 }
 .Darkmode-toggle > button {
   font-size: 1.2em;
@@ -49,17 +14,284 @@ body.Darkmode .Darkmode-toggle > button:last-child {
   cursor: pointer;
   transition: color .3s ease
 }
-.Darkmode-toggle > button:last-child {
-  color: #666
-}
 .Darkmode-toggle > button:focus {
   outline: 0
 }
+.Darkmode-toggle > button:last-child,
+.dark-mode-toggle > button:last-child {
+  color: #666
+}
+.Darkmode-toggle,
+.dark-mode-toggle {
+  display: flex;
+  margin: 0 auto
+}
+.Filterform {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 50px 0
+}
+.MovieCard {
+  width: 25%;
+  padding: 10px 20px
+}
+.MovieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 40px
+}
+.card {
+  margin-bottom: 5px;
+  overflow: hidden;
+  background-color: #345
+}
+.card-img-overlay {
+  transform: translateY(13rem);
+  transition: transform .18s ease-in;
+  top: 150px;
+  right: 0;
+  bottom: 0;
+  left: 0
+}
+.card-img-overlay .btn {
+  opacity: 0;
+  transform: translateY(2rem)
+}
+.card-img-overlay .card-text {
+  opacity: 0;
+  transform: translateY(-6rem);
+  transition: opacity .05s ease-in,transform .25s ease-in
+}
+.card:hover .btn {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity .7s ease-out,transform .35s ease-out
+}
+.card:hover .card-img {
+  mix-blend-mode: overlay
+}
+.card:hover .card-img-overlay {
+  transform: translateY(0);
+  transition: transform .25s ease-out;
+  background-color: rgba(0,0,0,.677)
+}
+.card:hover .card-text {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity .5s ease-out,transform .2s ease-out
+}
+.container {
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+  flex-direction: row;
+  flex-wrap: nowrap
+}
+.content {
+  max-width: 600px;
+  font-size: 20px;
+  line-height: 1.3em;
+  margin: 60px auto 0;
+  padding: 20px
+}
+.content a {
+  text-decoration: none;
+  color: #068
+}
+.content button {
+  color: #068;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  padding: 0
+}
+.content code {
+  background-color: #cbe9ff;
+  border-radius: 2px;
+  font-size: 1em;
+  padding: 0 5px
+}
+.content h1 {
+  font-size: 2rem
+}
+.content img {
+  width: 100%
+}
+.dark-mode-toggle > button {
+  font-size: 1.2em;
+  background: 0 0;
+  border: none;
+  color: #ffe600;
+  cursor: pointer;
+  transition: color .3s ease
+}
+.dark-mode-toggle > button:focus {
+  outline: 0
+}
+.description {
+  font-size: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 600px
+}
+.form-control-lg {
+  border-radius: 100px
+}
+.genre {
+  text-align: center
+}
+.navBar {
+  top: 0;
+  width: 100%;
+  background-color: #daeffe;
+  position: sticky;
+  z-index: 1;
+  padding: 10px 0
+}
+.poster {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.rate {
+  font-size: 12px;
+  cursor: auto
+}
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.searchinp {
+  width: 25%;
+  background: #0000
+}
+.spanRate {
+  color: #ffc800;
+  font-weight: 700;
+  font-size: 14px;
+  vertical-align: baseline
+}
+.title {
+  font-size: 22px;
+  text-align: center;
+  padding: 10px 0 0
+}
 .toggle-control {
   position: relative;
-  padding: 0 4px;
   display: flex;
-  align-items: center
+  align-items: center;
+  padding: 0 4px
+}
+.trailer {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: fixed;
+  background-blend-mode: soft-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-between
+}
+.trailerposter {
+  width: 200px
+}
+.ulContainer {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  align-items: center;
+  list-style: none;
+  margin: 0
+}
+.url {
+  font-size: 10px
+}
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0
+}
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute
+}
+:root.Darkmode,
+body.dark-mode {
+  background-color: #10171d;
+  color: #dfdfdf
+}
+:root.Lightmode,
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color .3s ease
+}
+body.Darkmode .Darkmode-toggle > button,
+body.dark-mode .dark-mode-toggle > button {
+  color: #999
+}
+body.Darkmode .Darkmode-toggle > button:last-child {
+  color: #add8e6
+}
+body.dark-mode .content a,
+body.dark-mode .content button {
+  color: #ee09
+}
+body.dark-mode .dark-mode-toggle > button:last-child {
+  color: #1ab0e2
+}
+body.dark-mode .logo {
+  content: url(/image/logo-white.png)
+}
+body.dark-mode .modal-content {
+  background-color: #333
+}
+body.dark-mode .content code,
+body.dark-mode .navBar {
+  background-color: #1b2938
+}
+body.dark-mode .star,
+body.light-mode .sun {
+  opacity: .1!important
+}
+body.dark-mode container.trailer {
+  background-color: #000000cf
+}
+button.btn.btn-primary {
+  width: inherit
+}
+button.btn.btn-primary.mb-3 {
+  margin: 0 0 0 15px
+}
+button.btn.btn-secondary {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  float: right;
+  z-index: 10
+}
+container.trailer {
+  background-color: #ffffffcf
+}
+h6 {
+  margin-right: 120px
+}
+body,
+html {
+  font-family: 0 BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  margin: 0;
+  padding: 0
 }
 input[type=checkbox].dmcheck {
   width: 25px;
@@ -74,12 +306,6 @@ input[type=checkbox].dmcheck {
   vertical-align: 2px;
   outline: 0
 }
-input[type=checkbox].dmcheck:checked + label {
-  left: 10px
-}
-input[type=checkbox].dmcheck:focus-visible {
-  outline: solid 2px white
-}
 input[type=checkbox].dmcheck + label {
   display: inline-block;
   width: 18px;
@@ -93,299 +319,18 @@ input[type=checkbox].dmcheck + label {
   opacity: .9;
   background-color: #f6f6f6
 }
-* {
-  font-family: Roboto,sans-serif
+input[type=checkbox].dmcheck:checked + label {
+  left: 10px
 }
-button.btn.btn-primary.mb-3 {
-  margin: 0 0 0 15px
+input[type=checkbox].dmcheck:focus-visible {
+  outline: solid 2px #FFF
 }
-.card {
-  margin-bottom: 5px
-}
-button.btn.btn-secondary {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  float: right;
-  z-index: 10
-}
-.AddMovie {
-  max-width: 50%;
-  margin: 0 auto;
-  padding: 50px 0
-}
-.rating {
-  display: flex;
-  align-items: center
-}
-h6 {
-  margin-right: 120px
-}
-* {
-  font-family: Roboto,sans-serif
-}
-.MovieList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0 40px;
-}
-.MovieCard {
-  width: 25%;
-  padding: 10px 20px
-}
-.title {
-  font-size: 22px;
-  text-align: center;
-  padding: 10px 0 0 0
-}
-.description {
-  font-size: 15px;
-  text-align: justify;
-  text-justify: inter-word;
-  width: 600px;
-}
-.rate {
-  font-size: 12px;
-  cursor:auto;
-}
-.url {
-  font-size: 10px
-}
-.spanRate {
-  color: #ffc800;
-  font-weight: 700;
-  font-size: 14px;
-  vertical-align: baseline
-}
-.AddMovie {
-  max-width: 50%;
-  margin: 0 auto;
-  padding: 50px 0
-}
-.rating {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-h6 {
-  margin-right: 120px
-}
-.searchinp {
-  width: 25%;
-  background: #0000;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-body.light-mode {
-  background-color: #fff;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-body.dark-mode {
-  background-color: #10171d;
-  color: #dfdfdf;
-}
-body.dark-mode .navBar {
-  background-color: #1b2938;
-}
-body.dark-mode .dark-mode-toggle > button {
-  color: #999;
-}
-body.dark-mode .dark-mode-toggle > button:last-child {
-  color: rgb(26, 176, 226);
-}
-.ulContainer {
-  display: flex;
-  justify-content: space-around;
-  text-decoration: none;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-}
-body.dark-mode .logo{
-  content: url(/image/logo-white.png);
-}
-.navBar {
-  top: 0;
-  width: 100%;
-  background-color: #daeffe;
-  position: sticky;
-  z-index: 1;
-  padding: 10px 0;
-}
-.content {
-  padding: 20px;
-  margin: 0 auto;
-  margin-top: 60px;
-  max-width: 600px;
-  font-size: 20px;
-  line-height: 1.3em;
-}
-.content h1 {
-  font-size: 2rem;
-}
-.content img {
-  width: 100%;
-}
-.content code {
-  background-color: #cbe9ff;
-  border-radius: 2px;
-  font-size: 1em;
-  padding: 0 5px;
-}
-.content a {
-  text-decoration: none;
-  color: #006688;
-}
-.content button {
-  color: #006688;
-  background-color: transparent;
-  border: none;
-  font-size: 1em;
-  padding: 0;
-}
-
-body.dark-mode .content code {
-  background-color: #1b2938;
-}
-
-body.dark-mode .content a {
-  color: #ee09;
-}
-
-body.dark-mode .content button {
-  color: #ee09;
-}
-.dark-mode-toggle {
-  display: flex;
-  margin: 0 auto;
-}
-.dark-mode-toggle > button {
-  font-size: 1.2em;
-  background: none;
-  border: none;
-  color: #ffe600;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.dark-mode-toggle > button:last-child {
-  color: #666;
-}
-.dark-mode-toggle > button:focus {
-  outline: none;
-}
-.container {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-}
-.card-img-overlay {
-  transform: translateY(13rem);
-  transition: transform 0.18s ease-in;
-}
-.card-img-overlay .card-text {
-  opacity: 0;
-  transform: translateY(-6rem);
-  transition: opacity 0.05s ease-in, transform 0.25s ease-in;
-}
-.card-img-overlay .btn {
-  opacity: 0;
-  transform: translateY(2rem);
-}
-.card {
-  overflow: hidden;
-  background-color: #345;
-}
-.card:hover .card-img {
-  mix-blend-mode: overlay;
-}
-.card:hover .card-img-overlay {
-  transform: translateY(0);
-  transition: transform 0.25s ease-out;
-  background-color: rgba(0, 0, 0, 0.677);
-}
-.card:hover .card-text {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.5s ease-out, transform 0.2s ease-out;
-}
-.card:hover .btn {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.7s ease-out, transform 0.35s ease-out;
-}
-.card-img-overlay {
-  top: 150px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.container {
-  display: flex;
-  align-items: center;
-  min-height: 50vh;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-body.dark-mode .star {
-  opacity: 0.1 !important;
-}
-body.light-mode .sun {
-  opacity: 0.1 !important;
-}
-button.btn.btn-primary {
-  width: inherit;
-}
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
+span {
   position: relative;
-  height: 0;
-}
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-.genre{
-  text-align: center;
-}
-body.dark-mode .modal-content {
-  background-color: #333;
-}
-.trailer {
-  height: 100vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  position: fixed;
-}
-.trailer {
-  height: 100vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  position: fixed;
-  background-blend-mode: soft-light;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  align-content: space-between;
-}
-container.trailer {
-  background-color: #ffffffcf;
-}
-body.dark-mode container.trailer {
-  background-color: #000000cf;
-}
-.trailerposter{
-  width: 200px;
+  cursor: pointer;
+  display: block;
+  float: left;
+  color: grey;
+  font-size: 35px;
+  overflow: hidden
 }
